@@ -1,0 +1,7 @@
+ platform :ios, ’10.0’
+
+target 'CreateDesktopShortcut' do
+  pod 'CocoaHTTPServer'
+  pod 'GTMBase64'
+  pod 'YYCategories'
+end
