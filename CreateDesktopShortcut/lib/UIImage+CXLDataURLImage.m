@@ -1,24 +1,18 @@
 //
-//  UIImage.m
-//  DLCreateShortcut
+//  UIImage+CXLDataURLImage.m
+//  CreateDesktopShortcut
 //
-//  Created by donglei on 16/3/30.
-//  Copyright © 2016年 DL. All rights reserved.
+//  Created by 曹学亮 on 2018/1/18.
+//  Copyright © 2018年 caoxueliang.cn. All rights reserved.
 //
 
-#import "UIImage+DLDataURIImage.h"
+#import "UIImage+CXLDataURLImage.h"
 
-@implementation UIImage (DLDataURIImage)
-
+@implementation UIImage (CXLDataURLImage)
 - (NSString *)dataURISchemeImage{
-    
     NSString *imageString = [UIImagePNGRepresentation(self) base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
-    
     NSString *prefix = @"data:image/png;base64,";
-    
     NSString *returnStr = [prefix stringByAppendingString:imageString];
-    
     return returnStr;
 }
-
 @end

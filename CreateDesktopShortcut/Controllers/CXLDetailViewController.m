@@ -7,31 +7,52 @@
 //
 
 #import "CXLDetailViewController.h"
+#import "CXLCreateDesktopManager.h"
 
 @interface CXLDetailViewController ()
-
+@property (nonatomic,copy) NSString *tip;
+@property (nonatomic,strong) UILabel *tipLabel;
 @end
 
 @implementation CXLDetailViewController
+#pragma mark - Init Menthod
++ (instancetype)initWithTitle:(NSString *)title{
+    CXLDetailViewController *controller = [[CXLDetailViewController alloc]init];
+    controller.tip = title;
+    return controller;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    self.navigationItem.title = @"详情页";
+    [self addSubViews];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)addSubViews{
+    [self.view addSubview:self.tipLabel];
+    self.tipLabel.frame = self.view.bounds;
+    self.tipLabel.text = self.tip;
+
+    UIBarButtonItem *rightButton = [[UIBarButtonItem alloc]initWithTitle:@"+快捷方式" style:UIBarButtonItemStylePlain target:self action:@selector(addDesktop)];
+    self.navigationItem.rightBarButtonItem = rightButton;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - Event Response
+- (void)addDesktop{
+    NSString *scheme = [NSString stringWithFormat:@"CreateDesktop://%@",self.tip];
+    [[CXLCreateDesktopManager sharedInsance] createDesktopWithIconImage:@"icon" launchImage:@"launch" appTitle:@"桌面快捷方式" URLScheme:scheme];
 }
-*/
+
+#pragma mark - Setter && Getter
+- (UILabel *)tipLabel{
+    if (!_tipLabel) {
+        _tipLabel = [UILabel new];
+        _tipLabel.font = [UIFont boldSystemFontOfSize:50];
+        _tipLabel.textColor = [UIColor blueColor];
+        _tipLabel.textAlignment = NSTextAlignmentCenter;
+    }
+    return _tipLabel;
+}
 
 @end

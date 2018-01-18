@@ -8,6 +8,7 @@
 
 #import "CXLRootViewController.h"
 #import <YYCategories/YYCategories.h>
+#import "CXLDetailViewController.h"
 
 @interface CXLRootViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) UITableView *myTable;
@@ -20,14 +21,31 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.myTable];
+    self.navigationItem.title = @"首页";
 }
 
 #pragma mark - UITableView M
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    
+    return self.dataArray.count;
 }
 
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.textLabel.text = self.dataArray[indexPath.row];
+    cell.textLabel.font = [UIFont systemFontOfSize:16];
+    return cell;
+}
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 45.0f;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    CXLDetailViewController *controller = [CXLDetailViewController initWithTitle:self.dataArray[indexPath.row]];
+    [self.navigationController pushViewController:controller animated:YES];
+}
 
 #pragma mark - Setter && Getter
 - (UITableView *)myTable{

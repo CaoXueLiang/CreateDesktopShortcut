@@ -14,11 +14,11 @@
 		58C5287B2010A7A600F4BB25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C5287A2010A7A600F4BB25 /* main.m */; };
 		58C528A12010A88700F4BB25 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 58C5289F2010A88700F4BB25 /* index.html */; };
 		58C528A22010A88700F4BB25 /* content.html in Resources */ = {isa = PBXBuildFile; fileRef = 58C528A02010A88700F4BB25 /* content.html */; };
-		58C528A92010A8DA00F4BB25 /* DLBase64.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C528A32010A8D900F4BB25 /* DLBase64.m */; };
-		58C528AA2010A8DA00F4BB25 /* UIImage+DLDataURIImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C528A62010A8DA00F4BB25 /* UIImage+DLDataURIImage.m */; };
-		58C528AB2010A8DA00F4BB25 /* DLAddToDesktopHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C528A72010A8DA00F4BB25 /* DLAddToDesktopHandler.m */; };
 		58C528AF2010AB8200F4BB25 /* CXLRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C528AE2010AB8200F4BB25 /* CXLRootViewController.m */; };
 		58C528B52010AD2300F4BB25 /* CXLDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C528B42010AD2300F4BB25 /* CXLDetailViewController.m */; };
+		C30066B62010D02400107BFB /* NSFileManager+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = C30066B42010D02400107BFB /* NSFileManager+Utils.m */; };
+		C30066B92010D08B00107BFB /* UIImage+CXLDataURLImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C30066B82010D08B00107BFB /* UIImage+CXLDataURLImage.m */; };
+		C30066BC2010D6EB00107BFB /* CXLCreateDesktopManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C30066BB2010D6EB00107BFB /* CXLCreateDesktopManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,16 +34,16 @@
 		58C5287A2010A7A600F4BB25 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		58C5289F2010A88700F4BB25 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		58C528A02010A88700F4BB25 /* content.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = content.html; sourceTree = "<group>"; };
-		58C528A32010A8D900F4BB25 /* DLBase64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLBase64.m; sourceTree = "<group>"; };
-		58C528A42010A8DA00F4BB25 /* UIImage+DLDataURIImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DLDataURIImage.h"; sourceTree = "<group>"; };
-		58C528A52010A8DA00F4BB25 /* DLBase64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLBase64.h; sourceTree = "<group>"; };
-		58C528A62010A8DA00F4BB25 /* UIImage+DLDataURIImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DLDataURIImage.m"; sourceTree = "<group>"; };
-		58C528A72010A8DA00F4BB25 /* DLAddToDesktopHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DLAddToDesktopHandler.m; sourceTree = "<group>"; };
-		58C528A82010A8DA00F4BB25 /* DLAddToDesktopHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DLAddToDesktopHandler.h; sourceTree = "<group>"; };
 		58C528AD2010AB8200F4BB25 /* CXLRootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXLRootViewController.h; sourceTree = "<group>"; };
 		58C528AE2010AB8200F4BB25 /* CXLRootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXLRootViewController.m; sourceTree = "<group>"; };
 		58C528B32010AD2300F4BB25 /* CXLDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXLDetailViewController.h; sourceTree = "<group>"; };
 		58C528B42010AD2300F4BB25 /* CXLDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXLDetailViewController.m; sourceTree = "<group>"; };
+		C30066B42010D02400107BFB /* NSFileManager+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+Utils.m"; sourceTree = "<group>"; };
+		C30066B52010D02400107BFB /* NSFileManager+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+Utils.h"; sourceTree = "<group>"; };
+		C30066B72010D08B00107BFB /* UIImage+CXLDataURLImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+CXLDataURLImage.h"; sourceTree = "<group>"; };
+		C30066B82010D08B00107BFB /* UIImage+CXLDataURLImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CXLDataURLImage.m"; sourceTree = "<group>"; };
+		C30066BA2010D6EB00107BFB /* CXLCreateDesktopManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CXLCreateDesktopManager.h; sourceTree = "<group>"; };
+		C30066BB2010D6EB00107BFB /* CXLCreateDesktopManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CXLCreateDesktopManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,13 +103,13 @@
 		58C5289D2010A82000F4BB25 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				58C528A82010A8DA00F4BB25 /* DLAddToDesktopHandler.h */,
-				58C528A72010A8DA00F4BB25 /* DLAddToDesktopHandler.m */,
-				58C528A52010A8DA00F4BB25 /* DLBase64.h */,
-				58C528A32010A8D900F4BB25 /* DLBase64.m */,
-				58C528A42010A8DA00F4BB25 /* UIImage+DLDataURIImage.h */,
-				58C528A62010A8DA00F4BB25 /* UIImage+DLDataURIImage.m */,
 				58C5289E2010A83200F4BB25 /* HTML */,
+				C30066BA2010D6EB00107BFB /* CXLCreateDesktopManager.h */,
+				C30066BB2010D6EB00107BFB /* CXLCreateDesktopManager.m */,
+				C30066B72010D08B00107BFB /* UIImage+CXLDataURLImage.h */,
+				C30066B82010D08B00107BFB /* UIImage+CXLDataURLImage.m */,
+				C30066B52010D02400107BFB /* NSFileManager+Utils.h */,
+				C30066B42010D02400107BFB /* NSFileManager+Utils.m */,
 			);
 			path = lib;
 			sourceTree = "<group>";
@@ -219,13 +219,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CreateDesktopShortcut-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5128DA67EFE9569A45C4676F /* [CP] Embed Pods Frameworks */ = {
@@ -265,13 +268,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C30066B62010D02400107BFB /* NSFileManager+Utils.m in Sources */,
 				58C5287B2010A7A600F4BB25 /* main.m in Sources */,
-				58C528AA2010A8DA00F4BB25 /* UIImage+DLDataURIImage.m in Sources */,
+				C30066BC2010D6EB00107BFB /* CXLCreateDesktopManager.m in Sources */,
 				58C528AF2010AB8200F4BB25 /* CXLRootViewController.m in Sources */,
-				58C528A92010A8DA00F4BB25 /* DLBase64.m in Sources */,
-				58C528AB2010A8DA00F4BB25 /* DLAddToDesktopHandler.m in Sources */,
 				58C5286D2010A7A600F4BB25 /* AppDelegate.m in Sources */,
 				58C528B52010AD2300F4BB25 /* CXLDetailViewController.m in Sources */,
+				C30066B92010D08B00107BFB /* UIImage+CXLDataURLImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,7 +340,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -386,7 +389,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -398,14 +401,15 @@
 			baseConfigurationReference = 50F7CF9D2D6FA076759EC6ED /* Pods-CreateDesktopShortcut.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3PXZ8TZBJ4;
 				INFOPLIST_FILE = CreateDesktopShortcut/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = caoxueliang.CreateDesktopShortcut;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -414,14 +418,15 @@
 			baseConfigurationReference = 318AA622A28909391DCF4B98 /* Pods-CreateDesktopShortcut.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3PXZ8TZBJ4;
 				INFOPLIST_FILE = CreateDesktopShortcut/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = caoxueliang.CreateDesktopShortcut;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
