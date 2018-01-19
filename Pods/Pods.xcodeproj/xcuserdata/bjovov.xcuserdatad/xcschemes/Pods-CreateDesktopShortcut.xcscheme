@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '7ABC4D8472E661C686269A9FD63CDEED'
+               BlueprintIdentifier = '26CD7E404A9235B7013632F462CB7742'
                BlueprintName = 'Pods-CreateDesktopShortcut'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-CreateDesktopShortcut.a'>

@@ -25,6 +25,6 @@
  @param title            app名称
  @param scheme           APP的URL Schemes
  */
-- (void)createDesktopWithIconImage:(NSString *)iconImage launchImage:(NSString *)launchImageName appTitle:(NSString *)title URLScheme:(NSString *)scheme;
+- (void)createDesktopWithIconImage:(NSString *)iconImageName launchImage:(NSString *)launchImageName appTitle:(NSString *)title URLScheme:(NSString *)scheme;
 
 @end

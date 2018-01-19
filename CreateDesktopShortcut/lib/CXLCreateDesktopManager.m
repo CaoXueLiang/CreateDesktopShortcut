@@ -44,7 +44,7 @@ static NSString *CXLWebPath = @"CXLWebPath";
     NSString *DataURIString = [NSString stringWithFormat:@"0;data:text/html;charset=utf-8;base64,%@",contentHtmlString];
     NSString *indexHtmlString = [self indexHtmlWithBase64ContentString:DataURIString];
     
-    int localPort = 12346;
+    int localPort = 12348;
     /*将转换index.html保存到本地*/
     if ([self writeHTMLToDocument:indexHtmlString]) {
         /*配置本地服务器*/
@@ -54,7 +54,11 @@ static NSString *CXLWebPath = @"CXLWebPath";
     /*启动服务*/
     if ([self startServer]) {
         NSString *localAddress = [NSString stringWithFormat:@"http://127.0.0.1:%d",localPort];
-        [[UIApplication sharedApplication]openURL:[NSURL URLWithString:localAddress]];
+        if (@available(iOS 10.0, *)) {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:localAddress] options:@{} completionHandler:nil];
+        } else {
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:localAddress]];
+        }
     };
 }
 
@@ -98,8 +102,8 @@ static NSString *CXLWebPath = @"CXLWebPath";
     contentHtmlString = [contentHtmlString stringByReplacingOccurrencesOfString:CXLLaunchImageData withString:launchImageString];
     contentHtmlString = [contentHtmlString stringByReplacingOccurrencesOfString:CXLAppTitle withString:title];
     contentHtmlString = [contentHtmlString stringByReplacingOccurrencesOfString:CXLAppScheme withString:scheme];
-    return contentHtmlString;
     
+    return contentHtmlString;
 }
 
 -(NSString *)indexHtmlWithBase64ContentString:(NSString *)contentString{

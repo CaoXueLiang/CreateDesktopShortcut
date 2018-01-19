@@ -17,7 +17,6 @@
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     CXLRootViewController *controller = [[CXLRootViewController alloc]init];
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
@@ -41,7 +40,6 @@
     [navigationBarAppearance setTitleTextAttributes:textAttributes];
 }
 
-
 -(BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options{
     NSLog(@"scheme : %@",[url scheme]);
     NSLog(@"url : %@",url);
@@ -50,10 +48,10 @@
         NSString *title = [url.absoluteString substringFromIndex:16];
         CXLDetailViewController *controller = [CXLDetailViewController initWithTitle:title];
         UINavigationController *rooNav = (UINavigationController*)self.window.rootViewController;
-        [rooNav pushViewController:controller animated:NO];
+        [rooNav pushViewController:controller animated:YES];
     }
-
     return YES;
 }
 
 @end
+
