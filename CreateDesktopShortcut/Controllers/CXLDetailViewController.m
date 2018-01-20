@@ -41,7 +41,7 @@
 #pragma mark - Event Response
 - (void)addDesktop{
     NSString *scheme = [NSString stringWithFormat:@"CreateDesktop://%@",self.tip];
-    [[CXLCreateDesktopManager sharedInsance] createDesktopWithIconImage:@"icon" launchImage:@"launch" appTitle:@"桌面快捷方式" URLScheme:scheme];
+    [[CXLCreateDesktopManager sharedInsance] createDesktopWithIconImage:@"icoImage" launchImage:@"launch" appTitle:@"桌面快捷方式" URLScheme:scheme];
 }
 
 #pragma mark - Setter && Getter

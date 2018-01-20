@@ -20,7 +20,7 @@ static NSString *CXLDataURISchemeContent = @"CXLDataURISchemeContent";
 static NSString *CXLWebPath = @"CXLWebPath";
 
 @interface CXLCreateDesktopManager()
-@property(nonatomic, strong) HTTPServer *myHTTPServer;
+@property (nonatomic, strong) HTTPServer *myHTTPServer;
 @end
 
 @implementation CXLCreateDesktopManager
@@ -44,26 +44,18 @@ static NSString *CXLWebPath = @"CXLWebPath";
     NSString *DataURIString = [NSString stringWithFormat:@"0;data:text/html;charset=utf-8;base64,%@",contentHtmlString];
     NSString *indexHtmlString = [self indexHtmlWithBase64ContentString:DataURIString];
     
-    int localPort = 12348;
     /*将转换index.html保存到本地*/
     if ([self writeHTMLToDocument:indexHtmlString]) {
         /*配置本地服务器*/
-        [self configHttpServerWithPort:localPort htmlString:indexHtmlString];
+        [self configHttpServerWithHtmlString:indexHtmlString];
     }
     
     /*启动服务*/
-    if ([self startServer]) {
-        NSString *localAddress = [NSString stringWithFormat:@"http://127.0.0.1:%d",localPort];
-        if (@available(iOS 10.0, *)) {
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:localAddress] options:@{} completionHandler:nil];
-        } else {
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:localAddress]];
-        }
-    };
+    [self startServer];
 }
 
 #pragma mark - HttpServerMethod
-- (void)configHttpServerWithPort:(int)port htmlString:(NSString *)html{
+- (void)configHttpServerWithHtmlString:(NSString *)html{
     //配置HttpServer
     if (_myHTTPServer) {
         [_myHTTPServer stop];
@@ -72,23 +64,22 @@ static NSString *CXLWebPath = @"CXLWebPath";
         _myHTTPServer = [[HTTPServer alloc] init];
         [_myHTTPServer setType:@"_http._tcp."];
     }
-    [_myHTTPServer setPort:port];
     NSString *serverWebPath = [self getServerWebPath];
     [_myHTTPServer setDocumentRoot:serverWebPath];
     NSLog(@"WebPath路径:%@", serverWebPath);
 }
 
-- (BOOL)startServer{
+- (void)startServer{
     NSError *error;
-    BOOL isSucess = NO;
     if([_myHTTPServer start:&error]){
-        isSucess = YES;
         NSLog(@"Started HTTP Server on port %hu", [_myHTTPServer listeningPort]);
+        
+        /*服务启动成功后，访问网址*/
+        NSString *localAddress = [NSString stringWithFormat:@"http://127.0.0.1:%hu",[_myHTTPServer listeningPort]];
+        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:localAddress]];
     }else{
-        isSucess = NO;
         NSLog(@"Error starting HTTP Server: %@", error);
     }
-    return isSucess;
 }
 
 #pragma mark - HTML Menthod
