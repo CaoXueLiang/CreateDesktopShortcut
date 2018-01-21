@@ -1,6 +1,8 @@
-# CreateDesktopShortcut
 
-##前言
+
+![最终效果.gif](http://upload-images.jianshu.io/upload_images/979175-aafe024d56ecbadc.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+## 前言
 如何实现像淘宝一样将店铺的快捷方式添加到桌面，实现点击桌面快捷方式直接打开淘宝跳转到指定店铺。最近项目有这个需求，记录一下如何实现的，方便以后查看。
 首先来了解以下几个问题：
 1. URL Schemes 是什么
@@ -72,7 +74,7 @@ data:image/x-icon;base64,           base64编码的icon图片数据
 
 ```
 
-######设置web application样式
+###### 设置web application样式
 设置桌面快捷方式的样式，参考[苹果官方文档](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4)。
 
 设置桌面图标
@@ -99,7 +101,7 @@ data:image/x-icon;base64,           base64编码的icon图片数据
 ```
 <a href="tel:1-408-555-5555">Call me</a>
 ```
-###3. 如何创建桌面快捷方式
+### 3. 如何创建桌面快捷方式
 实现原理:  通过应用内部启动httpServer，调用safari访问localhost，同时，在主页通过跳转到新的Data URI页面。创建本地服务查看知乎上的回答：[localhost、127.0.0.1 和 本机IP 三者的区别?](https://www.zhihu.com/question/23940717)。
 
 优点：不需要服务器，没网也能完成操作。
@@ -137,9 +139,6 @@ data:image/x-icon;base64,           base64编码的icon图片数据
     sleep(1);
 }
 ```
-
-最终效果如下:
-![最终效果.gif](http://upload-images.jianshu.io/upload_images/979175-aafe024d56ecbadc.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 
