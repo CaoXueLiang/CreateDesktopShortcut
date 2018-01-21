@@ -47,7 +47,7 @@ URL Schemes 有两个单词：
 ```
 我们把图像文件的内容内置在HTML文档中，节省了一个HTTP请求。
 
-######Data URI的格式规范
+#### Data URI的格式规范
 ```
 data:[<mime type>][;charset=<charset>][;<encoding>],<encoded data>
 ```
@@ -74,7 +74,7 @@ data:image/x-icon;base64,           base64编码的icon图片数据
 
 ```
 
-###### 设置web application样式
+#### 设置web application样式
 设置桌面快捷方式的样式，参考[苹果官方文档](https://developer.apple.com/library/content/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW4)。
 
 设置桌面图标
